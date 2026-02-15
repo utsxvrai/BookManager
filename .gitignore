@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next
+.next
+out
+
+# env (keep .env.example if you add one)
+.env
+.env*.local
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# typescript
+next-env.d.ts
+*.tsbuildinfo
+
+# IDE
+.vercel
