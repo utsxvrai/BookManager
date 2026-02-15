@@ -1,10 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
-/**
- * Supabase client for Server Components, Route Handlers, and Server Actions.
- * Reads the session from cookies (set by middleware / auth callback).
- */
 export async function createClient() {
   const cookieStore = await cookies();
   return createServerClient(

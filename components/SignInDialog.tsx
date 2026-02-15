@@ -8,9 +8,6 @@ type Props = {
   onSignIn: () => void;
 };
 
-/**
- * Modal: "Sign in with Google first" + button. Uses black/white theme.
- */
 export function SignInDialog({ open, onClose, onSignIn }: Props) {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => e.key === "Escape" && onClose();

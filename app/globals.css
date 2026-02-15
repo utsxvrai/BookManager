@@ -8,7 +8,6 @@
   }
 }
 
-/* Scrollable bookmark list: thin scrollbar, no page scroll */
 .bookmarks-scroll {
   scrollbar-width: thin;
   scrollbar-color: #000 transparent;

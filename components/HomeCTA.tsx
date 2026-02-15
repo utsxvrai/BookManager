@@ -6,9 +6,6 @@ import { createClient } from "@/lib/supabaseClient";
 import type { User } from "@supabase/supabase-js";
 import { SignInDialog } from "./SignInDialog";
 
-/**
- * If logged in: Link to dashboard. If not: button that opens SignInDialog.
- */
 export function HomeCTA() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);

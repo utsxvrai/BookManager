@@ -6,13 +6,6 @@ import {
 } from "@/services/bookmark-service";
 import { NextResponse } from "next/server";
 
-/**
- * GET  — list current user's bookmarks.
- * POST — create bookmark (body: { url, title? }).
- * DELETE — delete bookmark (query: id=).
- * All require auth; 401 if no session.
- */
-
 export async function GET() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();

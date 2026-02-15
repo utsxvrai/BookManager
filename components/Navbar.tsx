@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { AuthButton } from "./AuthButton";
 
-/**
- * Top bar: app name, nav link, and auth (Sign in / Sign out + email).
- */
 export function Navbar() {
   return (
     <nav className="bg-white border-b border-black px-6 py-4 flex items-center justify-between">

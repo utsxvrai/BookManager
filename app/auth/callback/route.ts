@@ -1,10 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { NextResponse } from "next/server";
 
-/**
- * Auth callback — Supabase redirects here after Google sign-in.
- * Exchanges the code for a session and sets cookies, then redirects to dashboard.
- */
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get("code");

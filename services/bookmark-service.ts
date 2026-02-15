@@ -1,11 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Bookmark, BookmarkInsert } from "@/types/bookmark";
 
-/**
- * Service layer: bookmark business logic. All functions require an authenticated
- * Supabase client (RLS enforces user_id). No Express here — call from API routes.
- */
-
 export async function listBookmarks(
   supabase: SupabaseClient,
   userId: string

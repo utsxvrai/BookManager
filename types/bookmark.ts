@@ -1,7 +1,3 @@
-/**
- * Matches the Supabase `bookmarks` table row.
- * Used by the service layer and API.
- */
 export type Bookmark = {
   id: string;
   user_id: string;

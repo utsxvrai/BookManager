@@ -5,10 +5,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 
-/**
- * Client-only: Sign in with Google or Sign out + user email.
- * Uses Supabase client; router.refresh() so server components see new session.
- */
 export function AuthButton() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);

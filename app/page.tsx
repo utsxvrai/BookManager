@@ -1,9 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { HomeCTA } from "@/components/HomeCTA";
 
-/**
- * Home: landing + nav. Go to Dashboard opens sign-in dialog when not logged in.
- */
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">

@@ -4,9 +4,6 @@ import { Navbar } from "@/components/Navbar";
 import { BookmarkForm } from "@/components/BookmarkForm";
 import { BookmarkList } from "@/components/BookmarkList";
 
-/**
- * Dashboard: requires auth. BookmarkForm + BookmarkList (with Realtime).
- */
 export default async function DashboardPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
@@ -26,7 +23,6 @@ export default async function DashboardPage() {
               <BookmarkForm />
             </section>
           </aside>
-          {/* Right: only this panel scrolls */}
           <section className="flex-1 min-w-0 flex flex-col border-2 border-black rounded-2xl overflow-hidden bg-white shadow-[4px_4px_0_0_#000]">
             <div className="px-5 py-4 border-b-2 border-black shrink-0 bg-gray-50">
               <h2 className="text-sm font-semibold uppercase tracking-wider text-black">Your bookmarks</h2>

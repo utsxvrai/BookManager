@@ -1,7 +1,5 @@
--- Step 2: Run this in Supabase Dashboard → SQL Editor (New query)
--- Creates bookmarks table and RLS so each user only sees their own rows.
+-- Run in Supabase SQL Editor. Bookmarks + RLS; add to supabase_realtime for live updates.
 
--- Table: one row per bookmark, tied to auth.users
 create table if not exists public.bookmarks (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references auth.users(id) on delete cascade,
@@ -32,5 +30,4 @@ create policy "Users can delete own bookmarks"
   on public.bookmarks for delete
   using (auth.uid() = user_id);
 
--- Realtime: allow clients to subscribe to changes on bookmarks (Step 8)
 alter publication supabase_realtime add table public.bookmarks;

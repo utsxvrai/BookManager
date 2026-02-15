@@ -4,10 +4,6 @@ import { useCallback, useEffect, useState } from "react";
 import { useBookmarksRealtime } from "@/lib/useBookmarksRealtime";
 import type { Bookmark } from "@/types/bookmark";
 
-/**
- * Fetches bookmarks from API and subscribes to Realtime so the list updates
- * when data changes (e.g. in another tab). Pass a stable refetch to the hook.
- */
 export function BookmarkList() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
   const [loading, setLoading] = useState(true);

@@ -2,10 +2,6 @@
 
 import { useState } from "react";
 
-/**
- * Form to add a bookmark (URL + optional title). POSTs to /api/bookmarks.
- * Realtime will cause BookmarkList to refetch and show the new item.
- */
 export function BookmarkForm() {
   const [url, setUrl] = useState("");
   const [title, setTitle] = useState("");
