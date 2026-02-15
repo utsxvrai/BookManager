@@ -64,7 +64,7 @@ export function BookmarkList() {
       {bookmarks.map((b) => (
         <li
           key={b.id}
-          className="flex items-stretch gap-4 p-4 rounded-xl border-2 border-black bg-gray-50 hover:bg-gray-100 transition-colors"
+          className="flex flex-col sm:flex-row sm:items-stretch gap-4 p-4 rounded-xl border-2 border-black bg-gray-50 hover:bg-gray-100 transition-colors"
         >
           <div className="min-w-0 flex-1 flex flex-col justify-center">
             <p className="text-base font-semibold text-black leading-tight break-words" title={b.title || b.url}>
@@ -77,26 +77,26 @@ export function BookmarkList() {
               {formatDate(b.created_at)}
             </p>
           </div>
-          <div className="flex items-center gap-2 shrink-0 border-l-2 border-gray-200 pl-4">
+          <div className="flex items-center gap-2 shrink-0 border-t-2 sm:border-t-0 sm:border-l-2 border-gray-200 pt-4 sm:pt-0 sm:pl-4">
             <a
               href={b.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-2 text-xs font-medium border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1"
+              className="flex-1 sm:flex-none px-3 py-2 text-center text-xs font-medium border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1"
             >
               Visit
             </a>
             <button
               type="button"
               onClick={() => handleCopy(b.url)}
-              className="px-3 py-2 text-xs font-medium border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1"
+              className="flex-1 sm:flex-none px-3 py-2 text-xs font-medium border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1"
             >
               Copy
             </button>
             <button
               type="button"
               onClick={() => handleDelete(b.id)}
-              className="px-3 py-2 text-xs font-medium bg-black text-white rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1"
+              className="flex-1 sm:flex-none px-3 py-2 text-xs font-medium bg-black text-white rounded-lg hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-1"
               aria-label={`Delete ${b.title || b.url}`}
             >
               Delete

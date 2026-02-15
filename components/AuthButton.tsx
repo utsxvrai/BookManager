@@ -42,7 +42,9 @@ export function AuthButton() {
   if (user)
     return (
       <div className="flex items-center gap-3">
-        <span className="text-sm text-gray-600 max-w-[180px] truncate" title={user.email ?? undefined}>{user.email}</span>
+        <span className="hidden sm:inline text-sm text-gray-600 max-w-[180px] truncate" title={user.email ?? undefined}>
+          {user.email}
+        </span>
         <button
           type="button"
           onClick={signOut}
